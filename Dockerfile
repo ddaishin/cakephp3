@@ -48,4 +48,6 @@ RUN { \
 		echo 'xdebug.remote_host = docker.for.mac.localhost'; \
 	} >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+
 VOLUME /var/www/html
